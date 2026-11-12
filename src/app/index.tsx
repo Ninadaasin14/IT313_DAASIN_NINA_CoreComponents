@@ -18,15 +18,23 @@ const initialStudents = [
   { id: 's4', name: 'Dex Alonzo', year: '1st Year', photoUrl: 'https://i.pravatar.cc/100?img=4', flagged: false },
   { id: 's5', name: 'Eli Tan', year: '3rd Year', photoUrl: 'https://i.pravatar.cc/100?img=5', flagged: false },
 ];
+type StudentCardProps = {
+  id: string;
+  name: string;
+  year: string;
+  photoUrl: string;
+  flagged: boolean;
+  onToggleFlag: (id: string) => void;
+};
 
-function StudentCard({
+  function StudentCard({
   id,
   name,
   year,
   photoUrl,
   flagged,
   onToggleFlag,
-}) {
+}: StudentCardProps) {
   return (
     <View style={styles.card}>
       <Image source={{ uri: photoUrl }} style={styles.photo} />
@@ -63,7 +71,7 @@ export default function StudentDirectory() {
     student.name.toLowerCase().includes(query.toLowerCase())
   );
 
-  const toggleFlag = (id) => {
+  const toggleFlag = (id: string) => {
     setStudents(current =>
       current.map(student =>
         student.id === id
