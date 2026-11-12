@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ## Student Directory Viewer
 
 ## Project Description
@@ -46,3 +47,6 @@ When these properties are restored, the search functionality works correctly.
 
 ## Conclusion
 This project demonstrates the use of React Native core components, props, state, and event handling in building a Student Directory Viewer.
+=======
+# IT313_DAASIN_NINA_CoreComponents
+>>>>>>> 876d1e365338ab1c70e1b6bafb96f824e696d258
